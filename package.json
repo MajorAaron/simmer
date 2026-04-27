@@ -1,0 +1,11 @@
+{
+  "name": "simmer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Simmer — AI acid reflux trigger finder",
+  "type": "commonjs",
+  "scripts": {
+    "build": "echo 'No build step — vanilla HTML + Netlify Functions'"
+  },
+  "dependencies": {}
+}

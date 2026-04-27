@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trigger Finder — Simmer</title>
+  <meta name="description" content="Free GERD trigger finder. Paste your last week of meals and symptoms. AI tells you which foods are most likely behind your reflux." />
+  <link rel="icon" href="/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script defer src="https://us.i.posthog.com/static/array.js"></script>
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys getNextSurveyStep onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_QLq1IyOJF3FIKXvF462tepbZqLj4hHUl5j3OkXE1ReT', { api_host: 'https://us.i.posthog.com' });
+  </script>
+</head>
+<body class="tool-page">
+  <header class="tool-header">
+    <a href="/" class="logo-link" aria-label="Simmer home">
+      <img src="/logo.png" alt="" class="logo-img" onerror="this.style.display='none'" />
+      <span class="logo-word">Simmer</span>
+    </a>
+    <a href="/" class="nav-back">&larr; About Simmer</a>
+  </header>
+
+  <main class="tool-main">
+    <section class="tool-intro">
+      <p class="kicker">Free trigger finder · No signup needed</p>
+      <h1>What's actually setting you off?</h1>
+      <p class="lede">Paste your last week of meals and how you felt 1-2 hours after. We'll quietly read it back to you and tell you which foods are most likely behind your reflux.</p>
+    </section>
+
+    <section class="tool-card" id="tool-card">
+      <form id="trigger-form" class="trigger-form">
+        <div class="form-toggle">
+          <button type="button" class="toggle-btn active" data-mode="freetext">Quick paste</button>
+          <button type="button" class="toggle-btn" data-mode="structured">Meal-by-meal</button>
+        </div>
+
+        <div class="form-mode" id="mode-freetext">
+          <label for="freetext" class="field-label">Tell us what you ate &amp; how you felt</label>
+          <textarea id="freetext" name="freetext" rows="10" placeholder="Tuesday dinner — slice of pizza, glass of red wine at 7pm. Burning chest at 11pm, woke up at 2am.
+
+Wednesday lunch — turkey sandwich, water at noon. No symptoms.
+
+Wednesday dinner — pasta with tomato sauce, salad, beer at 8pm. Throat clearing all night, mild burn around 10pm.
+
+(...keep going for a week or so. The more meals, the better the pattern.)"></textarea>
+          <p class="hint">Type freely. Include time of day, what you ate, what you felt, and when. The AI handles the parsing.</p>
+        </div>
+
+        <div class="form-mode hidden" id="mode-structured">
+          <div id="meal-rows" class="meal-rows"></div>
+          <button type="button" id="add-meal" class="ghost-btn">+ Add another meal</button>
+          <p class="hint">Add 5-10 meals from the past week for the most accurate pattern.</p>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="primary-btn" id="analyze-btn">
+            <span class="btn-label">Find my triggers</span>
+            <span class="btn-spinner" aria-hidden="true"></span>
+          </button>
+          <p class="privacy-line">Quiet by design. Your entries are not shown to anyone.</p>
+        </div>
+      </form>
+    </section>
+
+    <section class="result-card hidden" id="result-card" aria-live="polite"></section>
+
+    <section class="tool-card capture-card hidden" id="capture-card">
+      <h2>Want Simmer to keep finding patterns as you log more?</h2>
+      <p>Get a weekly trigger report by email. No spam, no pressure. Unsubscribe in one tap.</p>
+      <form id="email-form" class="email-form">
+        <input type="email" name="email" id="email" required placeholder="you@example.com" autocomplete="email" />
+        <button type="submit" class="primary-btn" id="email-btn">
+          <span class="btn-label">Send me weekly reports</span>
+          <span class="btn-spinner" aria-hidden="true"></span>
+        </button>
+      </form>
+      <p class="capture-confirm hidden" id="capture-confirm">You're in. We'll send your first report when you've logged 7+ meals.</p>
+    </section>
+
+    <section class="how-it-works">
+      <h2>How Simmer reads your diary</h2>
+      <ol>
+        <li><strong>You paste meals &amp; symptoms.</strong> Free text or structured rows — whatever's faster.</li>
+        <li><strong>We parse and weigh.</strong> Foods get scored by how often they show up before symptoms. Timing and portion size factor in.</li>
+        <li><strong>You get plain language.</strong> Not a chart of p-values — sentences like "Tomatoes correlate with 8 of your 10 worst nights, especially after 7pm."</li>
+        <li><strong>Bring it to your GI.</strong> One-page summary in the paid tier. Free tier shows the same insights on screen.</li>
+      </ol>
+    </section>
+
+    <section class="disclaimer">
+      <p><strong>Informational only.</strong> Simmer is not a diagnostic tool and does not provide medical advice. Always discuss patterns and treatment with your physician.</p>
+    </section>
+  </main>
+
+  <footer class="tool-footer">
+    <p>Made by <a href="https://majorsolutions.studio">Major Solutions Studio</a></p>
+  </footer>
+
+  <script defer src="/app.js"></script>
+</body>
+</html>

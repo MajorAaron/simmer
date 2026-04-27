@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simmer — Find what's setting off your acid reflux</title>
+  <meta name="description" content="A quiet diary that uses AI to find your personal GERD triggers. Replace your spreadsheet. Bring your doctor a one-page report." />
+  <meta property="og:title" content="Simmer — Find what's setting off your acid reflux" />
+  <meta property="og:description" content="The diary that GERD sufferers have been keeping in Excel for years — but with an AI that actually reads it back." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://simmer.majorsolutions.studio" />
+  <link rel="icon" href="/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/landing.css" />
+  <script defer src="https://us.i.posthog.com/static/array.js"></script>
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys getNextSurveyStep onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_QLq1IyOJF3FIKXvF462tepbZqLj4hHUl5j3OkXE1ReT', { api_host: 'https://us.i.posthog.com' });
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Simmer",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web",
+    "offers": [
+      { "@type": "Offer", "name": "Spotcheck", "price": "0", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Tracker", "price": "9", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Care Team", "price": "19", "priceCurrency": "USD" }
+    ],
+    "description": "AI-powered acid reflux & GERD trigger diary that finds personal trigger patterns and produces doctor-shareable reports."
+  }
+  </script>
+</head>
+<body class="site-page">
+  <header class="site-header">
+    <a href="/" class="logo-link" aria-label="Simmer home">
+      <img src="/logo.png" alt="" class="logo-img" onerror="this.style.display='none'" />
+      <span class="logo-word">Simmer</span>
+    </a>
+    <nav class="site-nav">
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="/tool.html" class="nav-cta">Try the free tool</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="kicker">For people who quietly track every meal</p>
+        <h1>The diary that<br/><em>reads itself back to you.</em></h1>
+        <p class="hero-lede">A 30-second-per-meal logger for chronic acid reflux & GERD. We replace your spreadsheet — and find the triggers you can't see in the data.</p>
+        <div class="hero-cta">
+          <a href="/tool.html" class="primary-btn">Try the free Trigger Finder &rarr;</a>
+          <a href="#how" class="ghost-btn">How it works</a>
+        </div>
+        <p class="hero-tag">No signup. Quiet by design.</p>
+      </div>
+      <aside class="hero-card">
+        <div class="hero-card-head">
+          <span class="hero-dot"></span>
+          <span>Last week's pattern</span>
+        </div>
+        <div class="hero-card-body">
+          <p class="hc-trigger"><strong>Tomatoes</strong> — 8 of 10 worst nights, esp. after 7pm</p>
+          <p class="hc-trigger"><strong>Red wine</strong> — 6 of 10 worst nights</p>
+          <p class="hc-trigger"><strong>Late-night portions</strong> — 5 of 10 worst nights</p>
+          <p class="hc-meta">Confidence: HIGH · 32 meals · 7 days</p>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Social proof / quotes -->
+    <section class="quotes">
+      <p>From the people we built it for</p>
+      <div class="quote-grid">
+        <blockquote>
+          <p>"I've kept a 3-month spreadsheet and I still can't tell what's setting me off. There's just too much data."</p>
+          <cite>— r/GERD</cite>
+        </blockquote>
+        <blockquote>
+          <p>"My GI told me to journal but I keep forgetting which dinner caused last night's chest pain."</p>
+          <cite>— r/AcidReflux</cite>
+        </blockquote>
+        <blockquote>
+          <p>"I want to bring something to my next appointment that's actually readable, not 47 rows of phone notes."</p>
+          <cite>— r/LPR</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="how" id="how">
+      <h2>How Simmer reads your diary</h2>
+      <ol class="step-grid">
+        <li>
+          <span class="step-num">01</span>
+          <h3>Log meals in 30 seconds</h3>
+          <p>Type freely or use structured rows. We parse your own words — no rigid food database.</p>
+        </li>
+        <li>
+          <span class="step-num">02</span>
+          <h3>AI finds personal patterns</h3>
+          <p>Foods, timings, portion sizes — ranked by how often they show up before your symptoms.</p>
+        </li>
+        <li>
+          <span class="step-num">03</span>
+          <h3>Get a one-page report</h3>
+          <p>Plain language. No p-values. Doctor-shareable PDF in the paid tier.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Demo CTA -->
+    <section class="demo">
+      <div class="demo-inner">
+        <h2>Try it on your own diary, right now.</h2>
+        <p>Paste your last week of meals & symptoms. We'll tell you your top 3 triggers in 60 seconds.</p>
+        <a href="/tool.html" class="primary-btn">Open the free Trigger Finder &rarr;</a>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+      <h2>Simple. Quiet. Pay when you want more history.</h2>
+      <div class="pricing-grid">
+        <article class="price-card">
+          <h3>Spotcheck</h3>
+          <p class="price">$0</p>
+          <p class="price-meta">Free forever</p>
+          <ul>
+            <li>Last 7 days of logs</li>
+            <li>1 AI pattern report / month</li>
+            <li>Web access</li>
+          </ul>
+          <a href="/tool.html" class="ghost-btn full">Start logging</a>
+        </article>
+        <article class="price-card highlight">
+          <span class="price-flag">Most chosen</span>
+          <h3>Tracker</h3>
+          <p class="price">$9<span>/mo</span></p>
+          <p class="price-meta">$72/yr — save 33%</p>
+          <ul>
+            <li>Unlimited history</li>
+            <li>Weekly AI pattern reports</li>
+            <li>Doctor-shareable PDF</li>
+            <li>Email + push reminders</li>
+            <li>CSV export</li>
+          </ul>
+          <a href="#join" class="primary-btn full">Join the early list</a>
+        </article>
+        <article class="price-card">
+          <h3>Care Team</h3>
+          <p class="price">$19<span>/mo</span></p>
+          <p class="price-meta">$156/yr</p>
+          <ul>
+            <li>Everything in Tracker</li>
+            <li>Share-with-doctor portal</li>
+            <li>Apple Health import</li>
+            <li>Custom report templates</li>
+            <li>Priority support</li>
+          </ul>
+          <a href="#join" class="ghost-btn full">Notify me at launch</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Email capture -->
+    <section class="join" id="join">
+      <div class="join-inner">
+        <h2>Get the weekly trigger report.</h2>
+        <p>One email a week. Your top 3 triggers, observed timing patterns, and a doctor-friendly summary. Unsubscribe in one tap.</p>
+        <form id="join-form" class="email-form">
+          <input type="email" name="email" id="join-email" required placeholder="you@example.com" autocomplete="email" />
+          <button type="submit" class="primary-btn" id="join-btn">
+            <span class="btn-label">Send me weekly reports</span>
+            <span class="btn-spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+        <p class="join-confirm hidden" id="join-confirm">You're in. Check your inbox.</p>
+        <p class="join-tag">No spam. No ads. Quiet by design.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <h2>FAQ</h2>
+      <div class="faq-list">
+        <details>
+          <summary>Is Simmer a medical device or diagnostic tool?</summary>
+          <p>No. Simmer is informational only — it surfaces patterns in your own logs. It's not a substitute for your physician, and we never recommend medications or diagnoses.</p>
+        </details>
+        <details>
+          <summary>How is this different from mySymptoms or Cara Care?</summary>
+          <p>Those apps log. Simmer interprets. We use a language model to read your diary back to you — finding food, timing, and portion patterns you can't easily see in raw rows.</p>
+        </details>
+        <details>
+          <summary>What about my privacy?</summary>
+          <p>Your entries stay associated with your account, encrypted at rest, and we don't sell or share data with advertisers. Quiet by design.</p>
+        </details>
+        <details>
+          <summary>Can I import my existing Excel sheet?</summary>
+          <p>Yes — paste it directly into the free Trigger Finder. The AI parses free text and ranks triggers immediately.</p>
+        </details>
+        <details>
+          <summary>How does the doctor PDF work?</summary>
+          <p>One-page summary: top 5 triggers, severity timeline, frequency, and your 5 most common foods. Designed to fit on a clipboard.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made by <a href="https://majorsolutions.studio">Major Solutions Studio</a>. Quiet by design.</p>
+  </footer>
+
+  <script defer src="/landing.js"></script>
+</body>
+</html>
